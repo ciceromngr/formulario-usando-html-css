@@ -1,0 +1,289 @@
+:root {
+    --bg-color-header-footer:rgb(122,68,182);
+    --bg-color-formulary:rgb(83, 83, 184);
+    --color-font-primary:rgb(240, 235, 229);
+    --color-font-secundy:rgb(194,194,194);
+    --color-button:rgb(96,176,45);
+}
+* {
+    font: 'Roboto', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom,rgb(122,68,182),rgb(52,179,214));
+}
+/* header {
+    background-color: var(--bg-color-header-footer);
+} */
+header h1 {
+    color: var(--color-font-primary);
+    margin:15px;
+    box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.25);
+    padding:20px;
+    border-radius: 25px;
+    background-color: var(--bg-color-header-footer);
+}
+
+h1, h3 {
+    color: var(--color-font-primary);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    width: 350px;
+    margin:15px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    padding:20px;
+    border-radius: 25px;
+    background-color: var(--bg-color-formulary);
+}
+
+/*Aqui vai ficar as formatacoes da minha div input container*/
+div {
+    position: relative;
+}
+
+input {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+        /* padding: 0px; */
+    padding-top: 5px;
+    /* padding-left: 0; */
+    margin-top: 10px;
+    border: 0;
+    background-color: var(--bg-color-formulary);
+    border-bottom: 2px solid rgb(52,179,214);
+    font: 700;
+    color: var(--color-font-primary);
+    transition: .2s ease-in-out;/*especifica uma transicao com inio e fim lentos*/
+    border-radius: 15px;
+}
+ 
+label{
+    padding-top: 20px;
+    color: var(--color-font-primary);
+    display: flex;
+    /* align-items: center; */
+    font: 1rem;
+    cursor: text;
+    transition: .2s ease-in-out;
+    box-sizing: border-box; 
+} 
+
+/*aqui entra as novas informções do formulario*/
+/*
+1º- div informações , nome,email,telefone,cpf 
+aqu vao estra contidos os css desses elementos
+*/
+.nome::placeholder{
+    color:var(--color-font-secundy);
+}
+.nome:focus {
+    outline: 0;
+}
+.email::placeholder{
+    color:var(--color-font-secundy);
+}
+.email:focus {
+    outline:0;
+}
+.tel::placeholder{
+    color:var(--color-font-secundy);
+}
+.tel:focus {
+    outline:0;
+}
+.cpf::placeholder{
+    color:var(--color-font-secundy);
+}
+.cpf:focus {
+    outline:0;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*2º div localidade  rua, numero e estado,cidade, nessa div contem select,
+option, optgroup, datalist{options dentro}*/
+.rua:focus {
+    outline:0;
+}
+.rua::placeholder {
+    color:var(--color-font-secundy);
+}
+.numero-local:focus {
+    outline:0;
+}
+.numero-local::placeholder {
+    color:var(--color-font-secundy);
+}
+.localidade label {
+    margin-top: 15px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+#estado-select {
+    color: var(--color-font-primary);
+    margin:15px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    padding:7px;
+    border-radius: 25px;
+    margin-bottom: -5px;
+    margin-left: 100px;
+    cursor:pointer;
+    background-color:rgb(52,179,214) ;
+}
+
+#estado-select:focus {
+    outline:0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+ }
+
+ .localidade #cCid { /* <select> */
+    color: rgb(52,179,214);
+    margin:15px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    padding: 7px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    
+ }
+ #cCid:focus {
+     outline:0;
+ }
+ 
+ #cCid::placeholder {
+    color:var(--color-font-secundy);
+ }
+textarea {
+     resize: none;
+     width: 100%;
+     height: 150px;
+     text-align: center;
+     background-color: transparent;
+     border:none;
+     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.5);
+     color: var(--color-font-primary);
+     margin-top: 5px;
+     font-size: 20px;
+ }
+ textarea:focus {
+     outline: 0;
+ }
+ textarea::placeholder {
+    color:var(--color-font-secundy);
+ }
+ .resumo-aluno label {
+    text-align: center;
+    display: block;
+ }
+
+/*---------------------------------------------------------------------------------------------------*/
+termos-uso label {
+    text-align: center;
+    display: block;
+}
+input#scales {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    margin-bottom: -23px;
+    margin-left: 160px;
+    width: 14px;
+    display: flex;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.sim label.sim {
+    padding: 6px;
+    margin-top: auto;
+    margin-right: 305px;
+    margin-left: 55px;
+}
+
+input#horns {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    margin-bottom: -23px;
+    margin-left: 160px;
+    width: 14px;
+    display: flex;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.nao label.nao {
+    padding: 6px;
+    margin-top: auto;
+    margin-right: 305px;
+    margin-left: 55px;
+}
+
+
+
+.final input:focus {
+    outline: 0;
+}
+.final input {
+    cursor: pointer;
+}
+
+.final .enviar {
+    color: rgb(52,179,214);
+    margin:15px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    padding: 7px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+.final .enviar:focus {
+    outline: 0;
+}
+
+
+
+
+
+footer {
+    color: var(--color-font-primary);
+    margin:15px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    padding:20px;
+    border-radius: 25px;
+    background-color: var(--bg-color-header-footer);
+}
+
+/*Melhor parte a Interacao*/
+/* input:valid, label:focus {
+    border-bottom: 2px solid var(--color-font);
+} */
+/*base de muita pesquisa ate achar isso*/
+/* input:valid + label,
+input:focus + label {
+    color:var(--color-font);
+    font-size: .8rem;
+    
+    pointer-events: none;esse reage a eventos do ponteiro do mouse */
+
